@@ -7,6 +7,11 @@
 **API Endpoint**
 : A URL that exposes the functionality of an LLM runner, allowing other applications (like Roo Code) to interact with it programmatically.
 
+### B
+
+**BigCodeBench**
+: A benchmarking framework for evaluating code generation and understanding capabilities of large language models.
+
 ### C
 
 **Context Window**
@@ -14,6 +19,12 @@
 
 **Codebase Context**
 : The project files or code snippets that the language model can access and reference when generating responses or making changes.
+
+**Cline**
+: An original open-source Visual Studio Code extension for integrated local LLM capabilities. Roo Code is a fork of Cline, developed with a focus on veterinary and specialized domain applications while maintaining active collaboration with the original Cline project. While sharing core architectural principles, Roo Code and Cline have diverged to address different use cases and community needs.
+
+**CUDA**
+: NVIDIA's parallel computing platform and programming model for GPU-accelerated computing, crucial for high-performance local LLM inference.
 
 ### D
 
@@ -38,13 +49,22 @@
 **Large Language Model (LLM)**
 : A deep learning model trained on massive datasets of text and code, capable of generating human-quality text, translating languages, writing creative content, and answering questions informatively.
 
+**Layer Offloading**
+: A technique to manage GPU memory by strategically moving model layers between GPU and system memory during inference.
+
 **Local LLM Runner**
 : Software that enables running LLMs on local hardware (CPU or GPU). Examples include Ollama, `llama.cpp`, vLLM, LM Studio, and KoboldCpp.
 
 ### M
 
+**Memory Mapping**
+: A technique for efficiently managing how computer memory is assigned and accessed by models and tools.
+
 **MLX**
 : A file format optimized for Apple Silicon hardware, used by LM Studio to improve performance on Apple devices.
+
+**Model Context Protocol (MCP)**
+: A standardized framework for managing context, tool integration, and resource allocation in local LLM systems.
 
 **Model Library**
 : A collection of pre-trained models that can be easily downloaded and used with specific LLM runners.
@@ -53,6 +73,9 @@
 
 **Parameters**
 : The adjustable values within an LLM that determine its behavior and complexity. More parameters generally mean a more capable model but also higher resource requirements.
+
+**Prompt Template**
+: A predefined structure for constructing prompts that guides the language model's response generation.
 
 **Provider Settings**
 : The configuration options within Roo Code that allow users to specify how to interact with a model, including API endpoints, model selection, and performance parameters.
@@ -65,10 +88,38 @@
 - 8-bit: Balanced compression and accuracy
 - 16-bit (FP16): Lowest compression, highest accuracy
 
+### R
+
+**Resource Allocation**
+: The process of assigning and managing computational resources (CPU, GPU, memory) for model execution.
+
+**ROCm**
+: AMD's open-source alternative to CUDA, providing GPU computing capabilities for AMD graphics cards.
+
 ### S
 
 **System Message**
 : Special instructions provided to the model that define its role, behavior, and capabilities. These messages consume context window space but are crucial for proper model function.
+
+### T
+
+**Tool Architecture**
+: The structural design and organizational pattern of tools within a local LLM system.
+
+**Tool Execution**
+: The process of running and managing specific tools within the local LLM environment.
+
+**Tool Integration**
+: The process of connecting and coordinating different tools to work seamlessly within the local LLM system.
+
+**Tool Invocation**
+: The act of calling or activating a specific tool with defined parameters and context.
+
+**Tool Registry**
+: A centralized system for managing, discovering, and organizing available tools in the local LLM ecosystem.
+
+**Tool Validation**
+: The process of verifying and ensuring the reliability, safety, and correctness of tools before execution.
 
 ## Hardware Terms
 

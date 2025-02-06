@@ -18,11 +18,12 @@ Quick-start
 
 ## Hardware Compatibility Matrix
 
-| Hardware Tier | VRAM | Minimum Specs | Recommended Specs | Performance Level | Quantization Level |
-|--------------|------|---------------|-------------------|-------------------|-------------------|
-| Basic/Testing | 8GB  | RTX 3070      | RTX 3080         | Entry Level      | 4-bit/8-bit       |
-| Development  | 16GB | RTX 4080      | RTX 4090         | Mid-Range        | 8-bit             |
-| Production   | 32GB | A5000         | A6000            | High Performance | No quantization   |
+| Hardware Tier   | VRAM    | Minimum Specs                                      | Recommended Specs                              | Performance Level      | Quantization Level   |
+|-----------------|---------|----------------------------------------------------|------------------------------------------------|------------------------|----------------------|
+| Basic/Testing   | 8GB     | RTX 3070 **or** Jetson Orin NX 8GB                 | RTX 3080 **or** Jetson Orin NX 8GB               | Entry Level            | 4-bit/8-bit          |
+| Development     | 16GB    | RTX 4080 **or** Jetson Orin NX 16GB                | RTX 4090                                       | Mid-Range              | 8-bit                |
+| Production      | 32GB    | A5000 **or** Jetson AGX Orin 32GB                  | A6000 **or** Jetson AGX Orin 32GB               | High Performance       | No quantization      |
+| Enterprise      | 64GB+   | High-end GPUs **or** Jetson AGX Orin 64GB           | Suitable for FP16 precision operation          | Maximum Performance    | FP16                 |
 
 ## Basic Requirements
 

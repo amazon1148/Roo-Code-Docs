@@ -88,7 +88,7 @@ ollama pull gemma-7b
 - [Troubleshooting](troubleshooting.md) - Common issues and solutions
 
 ## Technical Terms
-- VRAM - Video RAM, crucial for model loading
+- VRAM - Virtual RAM, crucial for model loading
 - Model Quantization - Technique for reducing model size
 - Context Window - Model's working memory size
 - Token Usage - Text processing units

@@ -1,50 +1,45 @@
 # Local LLM Documentation
 
-Welcome to the Local LLM documentation. This guide will help you set up, configure, and optimize local Large Language Models with Roo Code.
+Welcome to the Local LLM Documentation. This guide will assist you in setting up, configuring, and optimizing local Large Language Models using Roo Code.
 
-## Getting Started
+## Overview
 
-Choose your path based on your needs:
+This documentation is organized into several sections. Choose the path that best meets your needs:
 
-### Quick Start Path
+## Quick Start
 
-For users new to local LLMs or seeking basic setup:
-
-1. [Overview and Prerequisites](quick-start/local-llm-quick-path.md)
+### Basic Setup and Verification
+1. [Quick Start Overview](quick-start/local-llm-quick-path.md)
 2. [Hardware Requirements](quick-start/hardware-requirements.md)
 3. [Model Selection Guide](quick-start/model-selection.md)
 4. [Tool Usage Guide](quick-start/tool-usage.md)
-5. [Troubleshooting](quick-start/troubleshooting.md)
+5. [Setup Verification](quick-start/setup-verification.md)
+6. [Troubleshooting](quick-start/troubleshooting.md)
 
-### Advanced Configuration
+## Advanced Configuration
 
-For users requiring detailed setup and optimization:
-
+For detailed advanced configuration and optimization topics, refer to:
 1. [Architecture Deep Dive](advanced/architecture.md)
 2. [Hardware Optimization](advanced/hardware-optimization.md)
-3. [Model Selection & Tuning](advanced/model-tuning.md)
-4. [Token Management](advanced/token-management.md)
-5. [Prompt Engineering](advanced/prompt-engineering.md)
-6. [Advanced Troubleshooting](advanced/advanced-troubleshooting.md)
-7. [Tool Architecture](advanced/tool-architecture.md)
+3. [Model Selection Guide](advanced/model-selection-guide.md)
+4. [Model Tuning](advanced/model-tuning.md)
+5. [LLM Runner Comparison](advanced/llm-runner-comparison.md)
+6. [Prompt Engineering](advanced/prompt-engineering-new.md)
+7. [Token Management](advanced/token-management.md)
+8. [Tool Architecture](advanced/tool-architecture.md)
+9. [Tool Invocation](advanced/tool-invocation.md)
+10. [Advanced Troubleshooting](advanced/advanced-troubleshooting.md)
 
-## Documentation Features
+## Reference
 
-- **Comprehensive Guides**: From basic setup to advanced optimization
-- **Interactive Diagrams**: Visual representations of concepts and workflows
-- **Practical Examples**: Real-world usage scenarios and code samples
-- **Troubleshooting**: Solutions for common and advanced issues
+- [Glossary](reference/glossary.md)
 
 ## Contributing
 
-This documentation is maintained in our GitHub repository. We welcome contributions and feedback:
-
-1. Submit issues for content improvements
-2. Propose changes via pull requests
-3. Share your experience in the community
+We welcome contributions. Please submit issues or pull requests for content improvements.
 
 ## Need Help?
 
-- Check the [Glossary](reference/glossary.md) for terminology
-- Visit our Discord server for community support
-- Contact the development team for critical issues
+- For community support, visit our Discord server.
+- Check the [Glossary](reference/glossary.md) for terminology.
+- Contact the development team for critical issues.

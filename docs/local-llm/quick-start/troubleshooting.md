@@ -1,10 +1,20 @@
 # Basic Troubleshooting Guide
 
-## Overview
+## Difficulty Level
+Quick-start
 
-This guide helps resolve common issues when working with local LLMs. For more complex problems, see [advanced troubleshooting](../advanced/advanced-troubleshooting.md).
+## Estimated Reading Time
+15 minutes
 
-## Common Issues
+## Prerequisites
+- [Quick Start Guide](local-llm-quick-path.md)
+- [Tool Usage](tool-usage.md)
+
+## Topics Covered
+- Common issues
+- Basic diagnostics
+- Quick solutions
+- Prevention tips
 
 ```mermaid
 graph TD
@@ -17,44 +27,15 @@ graph TD
     Model --> MFix[Model Solutions]
 ```
 
-## Hardware Problems
+## Common Issues and Solutions
 
 ### Out of Memory
-Common signs:
-- Model fails to load
-- System becomes unresponsive
-- Error messages about memory
-
-Solutions:
-1. Close other applications
-2. Try smaller model
-3. Use quantization
-4. Reduce context length
-
-See [hardware requirements](hardware-requirements.md) for specifications.
-
-### Performance Issues
-Symptoms:
-- Slow responses
-- High CPU/GPU usage
-- System lag
-
-Quick fixes:
-1. Update drivers
-2. Check temperatures
-3. Close background apps
-4. Optimize settings
-
-## Software Issues
+- Close other applications
+- Try smaller model
+- Use quantization
+- Reduce context length
 
 ### Installation Problems
-Common errors:
-1. Missing dependencies
-2. Permission issues
-3. Compatibility problems
-4. Path errors
-
-Solutions:
 ```bash
 # Check permissions
 sudo chmod +x ./install.sh
@@ -62,104 +43,27 @@ sudo chmod +x ./install.sh
 # Verify dependencies
 python --version
 nvidia-smi
-
-# Clear cache
-rm -rf ~/.cache/ollama
 ```
 
-### Tool Issues
-Problems with:
-- API connections
-- GUI interfaces
-- Command line tools
-- Model management
+### Poor Code Quality
+- Try larger model if possible
+- Adjust temperature down
+- Use more specific prompts
+- Enable system prompts
 
-See [tool usage](tool-usage.md) for proper setup.
-
-## Model Problems
-
-### Loading Failures
-Common issues:
-1. Corrupt downloads
-2. Incompatible formats
-3. Missing files
-4. Wrong configurations
-
-Solutions:
-1. Re-download model
-2. Verify checksums
-3. Check compatibility
-4. Reset configurations
-
-See [model selection](model-selection.md) for compatibility.
-
-### Response Issues
-Problems with:
-- Poor quality outputs
-- Incomplete responses
-- Format errors
-- Context confusion
-
-Quick fixes:
-1. Adjust parameters
-2. Clear context
-3. Rephrase prompt
-4. Check token limits
-
-## Quick Solutions
-
-### First Steps
-When an issue occurs:
-1. Check error messages
-2. Verify system resources
-3. Review recent changes
-4. Test basic functionality
-
-### Basic Checks
-```python
-def basic_diagnostics():
-    # Check system resources
-    # Verify installations
-    # Test connections
-    # Validate configs
-```
-
-## Prevention Tips
-
-### Regular Maintenance
-1. Update software
-2. Monitor resources
-3. Clean cache
-4. Test functionality
-
-### Best Practices
-- Regular backups
-- Version control
-- Resource monitoring
-- Error logging
-
-## When to Seek Help
-
-Escalate when:
-1. Basic fixes fail
-2. System instability
-3. Data loss risk
-4. Critical failures
-
-See [advanced troubleshooting](../advanced/advanced-troubleshooting.md) for complex issues.
-
-## See Also
-
-- [Hardware Requirements](hardware-requirements.md) - System specifications
-- [Tool Usage](tool-usage.md) - Tool setup and usage
+## Related Topics
+- [Hardware Requirements](hardware-requirements.md) - System specs
 - [Model Selection](model-selection.md) - Model compatibility
-- [Quick Start Guide](local-llm-quick-path.md) - Basic setup
+- [Advanced Troubleshooting](../advanced/advanced-troubleshooting.md) - Complex issues
+- [Hardware Optimization](../advanced/hardware-optimization.md) - Performance
 
 ## Technical Terms
+- VRAM - Video memory
+- API - Application interface
+- Cache - Temporary storage
+- Context Window - Model memory
 
-See the [glossary](../reference/glossary.md) for explanations of:
-- VRAM
-- API
-- Cache
-- Quantization
-- Context Window
+## Next Steps
+1. [Advanced Troubleshooting](../advanced/advanced-troubleshooting.md)
+2. [Hardware Optimization](../advanced/hardware-optimization.md)
+3. [Model Tuning](../advanced/model-tuning.md)

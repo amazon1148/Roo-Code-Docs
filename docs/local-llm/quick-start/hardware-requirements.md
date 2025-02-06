@@ -1,8 +1,28 @@
 # Hardware Requirements
 
-## Overview
+## Difficulty Level
+Quick-start
 
-This guide outlines the basic hardware requirements for running local LLMs. Understanding these requirements will help you choose the right setup for your needs.
+## Estimated Reading Time
+20 minutes
+
+## Prerequisites
+- [Quick Start Guide](local-llm-quick-path.md)
+
+## Topics Covered
+- GPU/VRAM requirements
+- CPU specifications
+- RAM and storage needs
+- Performance expectations
+- Quantization requirements
+
+## Hardware Compatibility Matrix
+
+| Hardware Tier | VRAM | Minimum Specs | Recommended Specs | Performance Level | Quantization Level |
+|--------------|------|---------------|-------------------|-------------------|-------------------|
+| Basic/Testing | 8GB  | RTX 3070      | RTX 3080         | Entry Level      | 4-bit/8-bit       |
+| Development  | 16GB | RTX 4080      | RTX 4090         | Mid-Range        | 8-bit             |
+| Production   | 32GB | A5000         | A6000            | High Performance | No quantization   |
 
 ## Basic Requirements
 
@@ -17,119 +37,32 @@ graph TD
 ```
 
 ## GPU Requirements
-
-### NVIDIA GPUs
-| Model Size | Minimum VRAM | Recommended VRAM |
-|------------|-------------|------------------|
-| Small      | 8GB         | 12GB             |
-| Medium     | 16GB        | 24GB             |
-| Large      | 24GB        | 32GB+            |
-
-### AMD GPUs
-Limited support available. See [advanced hardware optimization](../advanced/hardware-optimization.md) for details.
+- Required VRAM = (model size) * 1.2
+- Example: 7B model needs ~8.4GB VRAM minimum
 
 ## CPU Requirements
-
-### Minimum Specifications
-- 4 cores/8 threads
-- 16GB RAM
-- AVX2 support
-
-### Recommended Specifications
-- 8+ cores/16 threads
-- 32GB RAM
-- AVX512 support
+- Minimum: 4 cores/8 threads, 16GB RAM
+- Recommended: 8+ cores/16 threads, 32GB RAM
 
 ## Storage Requirements
-
-### Space Needed
 - 10GB minimum for small models
 - 20GB recommended for medium models
 - 40GB+ for large models
 - Extra space for caching
 
-### Storage Type
-- SSD recommended
-- NVMe preferred for large models
-- HDD not recommended
-
-## Performance Levels
-
-### Entry Level (8GB VRAM)
-- Basic code completion
-- Simple queries
-- Limited tool usage
-
-See [model selection](model-selection.md) for compatible models.
-
-### Mid-Range (16GB VRAM)
-- Full code generation
-- Complex queries
-- Standard tool usage
-
-### High Performance (24GB+ VRAM)
-- Multiple models
-- Advanced features
-- Full tool integration
-
-## System Configuration
-
-### BIOS Settings
-- Enable virtualization
-- Configure memory timings
-- Set PCIe generation
-
-### Operating System
-- Latest Windows/Linux
-- Updated drivers
-- Proper configuration
-
-## Performance Tips
-
-Quick optimizations:
-1. Close unnecessary programs
-2. Update GPU drivers
-3. Monitor temperatures
-4. Manage background tasks
-
-See [troubleshooting](troubleshooting.md) for performance issues.
-
-## Upgrade Considerations
-
-Signs you might need better hardware:
-1. Slow responses
-2. Memory errors
-3. Model limitations
-4. Performance issues
-
-## Next Steps
-
-After confirming hardware:
-1. Choose your model
-2. Install required tools
-3. Begin basic setup
-
-See [local LLM quick path](local-llm-quick-path.md) to get started.
-
-## Advanced Topics
-
-For detailed optimization:
-- [Hardware Optimization](../advanced/hardware-optimization.md)
-- [Model Tuning](../advanced/model-tuning.md)
-- [Token Management](../advanced/token-management.md)
-
-## See Also
-
-- [Model Selection](model-selection.md) - Choosing compatible models
-- [Tool Usage](tool-usage.md) - Setting up tools
-- [Troubleshooting](troubleshooting.md) - Common issues
-- [Quick Start Guide](local-llm-quick-path.md) - Getting started
+## Related Topics
+- [Model Selection](model-selection.md) - Compatible models
+- [Hardware Optimization](../advanced/hardware-optimization.md) - Advanced setup
+- [Token Management](../advanced/token-management.md) - Memory usage
+- [Tool Usage](tool-usage.md) - Software requirements
 
 ## Technical Terms
+- VRAM - Video RAM for model loading
+- Quantization - Model compression technique
+- PCIe - System interconnect standard
+- NVMe - Storage interface type
 
-See the [glossary](../reference/glossary.md) for explanations of:
-- VRAM
-- RAM
-- PCIe
-- NVMe
-- Quantization
+## Next Steps
+1. [Model Selection](model-selection.md)
+2. [Tool Usage Guide](tool-usage.md)
+3. [Hardware Optimization](../advanced/hardware-optimization.md)

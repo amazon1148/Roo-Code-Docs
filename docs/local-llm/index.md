@@ -1,14 +1,21 @@
+---
+title: Local LLM Documentation
+nav_order: 1
+description: Guide for setting up, configuring, and optimizing local Large Language Models using Roo Code
+has_children: true
+---
+
 # Local LLM Documentation
 
 Welcome to the Local LLM Documentation. This guide will assist you in setting up, configuring, and optimizing local Large Language Models using Roo Code.
 
-## Overview
+## Quick Start Guide
 
-This documentation is organized into several sections. Choose the path that best meets your needs:
+Get started quickly with basic setup and verification:
 
-## Quick Start
+{: .note }
+Review the hardware requirements before selecting a model to ensure compatibility.
 
-### Basic Setup and Verification
 1. [Quick Start Overview](quick-start/local-llm-quick-path.md)
 2. [Hardware Requirements](quick-start/hardware-requirements.md)
 3. [Model Selection Guide](quick-start/model-selection.md)
@@ -18,7 +25,9 @@ This documentation is organized into several sections. Choose the path that best
 
 ## Advanced Configuration
 
-For detailed advanced configuration and optimization topics, refer to:
+For detailed configuration and optimization topics:
+
+{: .content-card }
 1. [Architecture Deep Dive](advanced/architecture.md)
 2. [Hardware Optimization](advanced/hardware-optimization.md)
 3. [Model Selection Guide](advanced/model-selection-guide.md)
@@ -32,14 +41,16 @@ For detailed advanced configuration and optimization topics, refer to:
 
 ## Reference
 
-- [Glossary](reference/glossary.md)
+- [Glossary](reference/glossary.md) - Comprehensive terminology reference
 
 ## Contributing
 
-We welcome contributions. Please submit issues or pull requests for content improvements.
+{: .tip }
+We welcome contributions! Please submit issues or pull requests for content improvements.
 
 ## Need Help?
 
-- For community support, visit our Discord server.
-- Check the [Glossary](reference/glossary.md) for terminology.
-- Contact the development team for critical issues.
+For additional support:
+- Join our [Discord server](https://discord.gg/roocode) for community support
+- Check the [Glossary](reference/glossary.md) for terminology
+- Contact the development team for critical issues through [GitHub](https://github.com/RooVetGit/Roo-Code)

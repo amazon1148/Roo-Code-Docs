@@ -1,11 +1,30 @@
+---
+title: LLM Runner Comparison
+nav_order: 3
+parent: Local LLM Documentation
+description: Detailed comparison of different LLM runners for local deployment
+---
+
 # LLM Runner Comparison
+
+In-depth analysis and comparison of different LLM runners for local deployment.
+
+## Difficulty Level
+Advanced
+
+## Estimated Reading Time
+35 minutes
+
+{: .note }
+Choose your LLM runner based on your specific requirements for performance, ease of use, and features.
 
 ## Overview
 
-This guide provides a detailed comparison of different LLM runners for local deployment.
+A comprehensive comparison of popular LLM runners for local deployment and usage.
 
 ## Comparison Matrix
 
+{: .content-card }
 | Feature | Ollama | LM Studio | KoboldCpp | Text Generation WebUI |
 |---------|---------|------------|-----------|----------------------|
 | Installation | Single curl command | GUI installer | Manual setup | Python pip install |
@@ -17,8 +36,9 @@ This guide provides a detailed comparison of different LLM runners for local dep
 | Context Window | Up to 32k | Model dependent | Model dependent | Model dependent |
 | Quantization | Built-in | Custom GGUF | GGUF support | Multiple formats |
 
-## Development Environment Comparison
+## Detailed Analysis
 
+{: .content-card }
 ### Ollama
 **Pros:**
 - One-line installation
@@ -31,7 +51,8 @@ This guide provides a detailed comparison of different LLM runners for local dep
 - Fixed API implementation
 - Less granular control
 
-**Best for:** Quick deployment, container environments
+{: .tip }
+Ollama is recommended for quick deployment and container environments.
 
 ### LM Studio
 **Pros:**
@@ -45,93 +66,81 @@ This guide provides a detailed comparison of different LLM runners for local dep
 - Windows/Mac focus
 - Limited CLI options
 
-**Best for:** Desktop development, model testing
+**Best for:** Desktop development and model testing
 
-### KoboldCpp
-**Pros:**
-- Memory efficient
-- Advanced quantization
-- High performance
-- Full API access
+## Integration Examples
 
-**Cons:**
-- Complex setup
-- Manual dependency management
-- Limited GUI features
-
-**Best for:** Performance-critical deployments
-
-### Text Generation WebUI
-**Pros:**
-- Extensive features
-- Multiple backends
-- Active community
-- Training support
-
-**Cons:**
-- Complex configuration
-- Higher resource usage
-- More setup steps
-
-**Best for:** Research, model fine-tuning
-
-## Setup Instructions
-
-### Ollama
+### Ollama Setup
 ```bash
-# Install
+# Installation
 curl -fsSL https://ollama.com/install.sh | sh
 
-# Run
-ollama run qwen2.5-coding
+# Model pull
+ollama pull qwen2.5-coding
+
+# Run server
+ollama serve
 ```
 
-### LM Studio
-1. Download installer
-2. Install application
-3. Download models
-4. Configure API server
+### API Integration
+```python
+import requests
 
-### KoboldCpp
-1. Download release
-2. Install dependencies
-3. Configure CUDA
-4. Run executable
-
-### Text Generation WebUI
-```bash
-pip install text-generation-webui
-python server.py --api
+def generate_text(prompt, model="qwen2.5-coding"):
+    response = requests.post(
+        'http://localhost:11434/api/generate',
+        json={
+            "model": model,
+            "prompt": prompt,
+            "parameters": {
+                "temperature": 0.7,
+                "top_p": 0.9
+            }
+        }
+    )
+    return response.json()
 ```
-
-## Integration Notes
-
-### API Endpoints
-All runners support:
-- `/api/generate` - Basic completion
-- `/api/chat` - Chat completion
-- Streaming responses
-- Parameter control
-
-### Language Support
-- Python clients available for all
-- REST APIs are language-agnostic
-- WebSocket support varies
 
 ## Performance Comparison
 
+{: .content-card }
 ### Token Generation Speed
 - KoboldCpp/GPU: ~65 tokens/second
 - llama.cpp/GPU: ~13.89 tokens/second
 - CPU-only: ~3.47 tokens/second
 
 ### Memory Usage
-Varies by model size and quantization:
-- 4-bit: ~8GB VRAM
-- 8-bit: ~16GB VRAM
-- Full precision: ~24GB+ VRAM
+| Quantization | VRAM Usage | Performance Impact |
+|--------------|------------|-------------------|
+| 4-bit | ~8GB | Moderate degradation |
+| 8-bit | ~16GB | Minor degradation |
+| Full precision | ~24GB+ | No degradation |
 
-## See Also
+## Deployment Scenarios
+
+### Development Environment
+```mermaid
+graph TD
+    Dev[Development] --> Local[Local Machine]
+    Local --> Tools[Choose Runner]
+    Tools --> Simple[Simple: Ollama]
+    Tools --> Advanced[Advanced: KoboldCpp]
+    Tools --> GUI[GUI: LM Studio]
+```
+
+## Related Topics
 - [Hardware Optimization](hardware-optimization.md)
 - [Model Selection](../quick-start/model-selection.md)
 - [Tool Usage](../quick-start/tool-usage.md)
+- [Performance Tuning](model-tuning.md)
+
+## Technical Terms
+- **GGUF**: GPU-optimized model format
+- **ROCm**: AMD's GPU computing platform
+- **WSS**: WebSocket secure protocol
+- **Quantization**: Model compression technique
+
+## Next Steps
+1. [Hardware Optimization](hardware-optimization.md)
+2. [Model Selection](model-selection-guide.md)
+3. [Performance Tuning](model-tuning.md)

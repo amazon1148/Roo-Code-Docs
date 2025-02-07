@@ -1,4 +1,13 @@
+---
+title: Quick Start Guide
+nav_order: 1
+parent: Local LLM Documentation
+description: A beginner-friendly guide to getting started with local Large Language Models
+---
+
 # Quick Start Guide: Local LLMs
+
+A comprehensive guide to get you started with local Large Language Models quickly and efficiently.
 
 ## Difficulty Level
 Quick-start
@@ -6,8 +15,11 @@ Quick-start
 ## Estimated Reading Time
 15 minutes
 
+{: .note }
+This guide assumes no prior experience with LLMs. Start here if you're new to local AI models.
+
 ## Prerequisites
-None - this is the starting point
+None - this is the starting point for working with local LLMs.
 
 ## Topics Covered
 - Basic system requirements
@@ -16,7 +28,7 @@ None - this is the starting point
 - First model run
 - Basic troubleshooting
 
-## Quick Setup Steps
+## Setup Process
 
 ```mermaid
 graph TD
@@ -29,6 +41,8 @@ graph TD
 ```
 
 ## 1. Check Your Hardware
+
+{: .content-card }
 Before starting, verify your system meets the minimum requirements:
 - CPU/GPU specifications
 - Memory requirements
@@ -37,22 +51,14 @@ Before starting, verify your system meets the minimum requirements:
 See [hardware requirements](hardware-requirements.md) for detailed specifications.
 
 ## 2. Choose Your Model
-Select a model based on your hardware:
 
-### 8GB VRAM or Less
-- Gemma 7B
-- Phi-2
-- Other small models
+Select a model based on your hardware capabilities:
 
-### 16GB VRAM
-- CodeLlama 13B
-- Mistral Small
-- Medium-sized models
-
-### 24GB+ VRAM
-- Qwen 2.5 Coder
-- DeepSeek 33B
-- Large models
+| VRAM Available | Recommended Models | Use Case |
+|----------------|-------------------|-----------|
+| 8GB or Less | Gemma 7B, Phi-2 | Basic tasks |
+| 16GB | CodeLlama 13B, Mistral Small | Development |
+| 24GB+ | Qwen 2.5 Coder, DeepSeek 33B | Production |
 
 ## 3. Basic Setup
 
@@ -63,39 +69,45 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 ## 4. First Run
 
+{: .tip }
+Start with a smaller model to verify your setup before moving to larger models.
+
 ### Download Model
 ```bash
-ollama pull qwen2.5-coding
-# Or for limited hardware
+# For systems with limited resources
 ollama pull gemma-7b
+
+# For more capable systems
+ollama pull qwen2.5-coding
 ```
 
 ### Basic Test
 ```python
 # Write a hello world program
+print("Hello, World!")
 ```
 
 ## Common Issues
-1. Verify hardware requirements
-2. Check model compatibility
-3. Confirm tool installation
-4. Review error messages
+
+1. Hardware Verification
+   - Check GPU compatibility
+   - Verify VRAM availability
+   - Confirm driver versions
+
+2. Software Setup
+   - Validate installation
+   - Check dependencies
+   - Review error messages
 
 ## Related Topics
-- [Hardware Requirements](hardware-requirements.md) - System specifications
-- [Model Selection](model-selection.md) - Choosing the right model
-- [Tool Usage Guide](tool-usage.md) - Using LLM tools
+- [Hardware Requirements](hardware-requirements.md) - Detailed system specifications
+- [Model Selection](model-selection.md) - In-depth model comparison
+- [Tool Usage Guide](tool-usage.md) - Comprehensive tool documentation
 - [Troubleshooting](troubleshooting.md) - Common issues and solutions
 
-## Technical Terms
-- VRAM - Virtual RAM, crucial for model loading
-- Model Quantization - Technique for reducing model size
-- Context Window - Model's working memory size
-- Token Usage - Text processing units
-
 ## Next Steps
-1. [Hardware Requirements](hardware-requirements.md)
-2. [Model Selection](model-selection.md)
-3. [Tool Usage Guide](tool-usage.md)
-4. [Basic Troubleshooting](troubleshooting.md)
-5. [Advanced Topics](../advanced/architecture.md)
+1. Review [Hardware Requirements](hardware-requirements.md)
+2. Choose a model from [Model Selection](model-selection.md)
+3. Learn tool basics in [Tool Usage Guide](tool-usage.md)
+4. Check [Basic Troubleshooting](troubleshooting.md)
+5. Explore [Advanced Topics](../advanced/architecture.md)

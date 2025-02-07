@@ -460,3 +460,4 @@ Eleanor C. Sayre, Kansas State University, Manhattan, KS 66506
 Mathew “Sandy” Martinuk, Alexander Bell, Cognition Technology, Vancouver, BC V5N3Z2
 
 We attribute the derived personas to the work of these researchers and thank them for their contributions to Open Source.
+<!-- PR change: adding initial content for personas.md -->
